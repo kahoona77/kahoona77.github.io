@@ -42,19 +42,6 @@
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#/galeries/hats">Hüte & Mützen</a></li>
-                        <li><a href="#/galeries/headpieces">Kopfschmuck</a></li>
-                        <li><a href="#/galeries/bridal">Braut</a></li>
-                        <!--<li><a href="#/galeries/kids">Kinder</a></li>-->
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle kk-anchor kk-icon-link" data-toggle="dropdown">
-                        <span class="glyphicon glyphicon-th-large"></span>
-                        Galerien2
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
                         <li ng-repeat="galerie in galeries"><a href="#/galerie/{{galerie.$id}}">{{galerie.name}}</a></li>
                     </ul>
                 </li>
