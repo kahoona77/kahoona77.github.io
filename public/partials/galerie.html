@@ -1,0 +1,35 @@
+<div ng-controller="GalerieController as g">
+  <div class="galerie-header">
+      <h2>Galerie - {{g.galerie.name}}</h2>
+      <p>
+          {{g.galerie.description}}
+      </p>
+      <ul>
+          <li ng-repeat="sec in g.sections | orderBy: 'position'">
+            <a ng-click="g.scrollTpSection(sec)">{{sec.name}}</a>
+          </li>
+      </ul>
+  </div>
+
+  <div class="container galerie">
+
+    <div class="galerie-section" ng-repeat="sec in g.sections | orderBy: 'position'" id="{{sec.name}}">
+      <h3 class="ng-scope">{{sec.name}}</h3>
+      <p class="ng-scope">
+        {{sec.description}}
+      </p>
+
+      <div class="row" ng-repeat="row in sec.rows">
+        <div class="col-xs-3" ng-repeat="item in row" name="{{item.id}}">
+          <div class="gallery-img img-circle">
+            <a href="public/img/loading.gif" title="{{item.id}}" data-gallery="">
+              <img ng-src="{{item.thumb}}" alt="{{item.name}}">
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+<div>

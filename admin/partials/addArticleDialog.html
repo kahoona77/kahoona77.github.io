@@ -1,0 +1,39 @@
+<md-dialog aria-label="Artikel hinzufügen">
+  <md-content>
+    <md-subheader class="md-sticky-no-effect">Artikel hinzufügen</md-subheader>
+    <div layout="row">
+      <md-input-container flex>
+        <label>Artikelname</label>
+        <input placeholder="Artikelname" ng-model="search.name">
+      </md-input-container>
+    </div>
+    <div style="height: 300px;">
+      <md-list>
+        <md-item ng-repeat="item in allItems | filter:search">
+          <md-item-content>
+            <div class="md-tile-left">
+              <img class="list-icon" ng-src="{{item.thumb}}" />
+            </div>
+            <div class="md-tile-content">
+              <h3>{{item.name}}</h3>
+              <p style="min-width: 200px">
+                {{item.description}}
+              </p>
+            </div>
+            <div>
+              <md-button class="md-fab md-primary md-accent" ng-click="addItem(item)">
+                <i class="mdi mdi-add mdi-lg"></i>
+              </md-button>
+            </div>
+          </md-item-content>
+        </md-item>
+      </md-list>
+    </div>
+  </md-content>
+  <div class="md-actions" layout="row">
+    <span flex></span>
+    <md-button ng-click="cancel()">
+     Abbrechen
+    </md-button>
+  </div>
+</md-dialog>

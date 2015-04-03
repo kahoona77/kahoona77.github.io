@@ -1,0 +1,33 @@
+<md-toolbar>
+  <div class="md-toolbar-tools">
+    <span>Artikel</span>
+    <!-- fill up the space between left and right area -->
+    <span flex></span>
+    <md-button ng-click="addItem()">Neuer Artikel</md-button>
+  </div>
+</md-toolbar>
+
+<md-content class="md-padding" layout="column">
+    <div>
+      <table md-colresize="md-colresize" class="md-table">
+        <thead>
+          <tr class="md-table-headers-row">
+            <th class="md-table-header">Bild</th>
+            <th class="md-table-header">Name</th>
+            <th class="md-table-header">Beschreibung</th>
+            <th class="md-table-header"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="item in items">
+            <td class="md-table-content"><img class="list-icon" ng-src="{{item.thumb}}" /></td>
+            <td class="md-table-content">{{item.name}}</td>
+            <td class="md-table-content">{{item.description}}</td>
+            <td class="md-table-td-more">
+              <md-button aria-label="Info" ng-click="showBottomSheet(item)"><i class="mdi mdi-more-vert"></i></md-button>
+            </td>
+          <td>
+        </tbody>
+      </table>
+    </div>
+</md-content>

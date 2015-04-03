@@ -1,0 +1,33 @@
+<md-toolbar>
+  <div class="md-toolbar-tools">
+    <span>Galarien</span>
+    <!-- fill up the space between left and right area -->
+    <span flex></span>
+    <md-button ng-click="addGalerie()">Neue Galerie</md-button>
+  </div>
+</md-toolbar>
+
+<md-content class="md-padding" layout="column">
+    <div>
+      <table md-colresize="md-colresize" class="md-table">
+        <thead>
+          <tr class="md-table-headers-row">
+            <th class="md-table-header">#</th>
+            <th class="md-table-header">Name</th>
+            <th class="md-table-header">Beschreibung</th>
+            <th class="md-table-header"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="galerie in galeries">
+            <td class="md-table-content">{{$index+1}}</td>
+            <td class="md-table-content">{{galerie.name}}</td>
+            <td class="md-table-content">{{galerie.description}}</td>
+            <td class="md-table-td-more">
+              <md-button aria-label="Info" ng-click="showBottomSheet(galerie)"><i class="mdi mdi-more-vert"></i></md-button>
+            </td>
+          <td>
+        </tbody>
+      </table>
+    </div>
+</md-content>
