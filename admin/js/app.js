@@ -15,8 +15,6 @@ angular.module('kka', [
   'kka.controllers'
 ]).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
-  $locationProvider.html5Mode(true);
-
   $routeProvider.when('/home', {templateUrl: '/admin/partials/home.html'});
   $routeProvider.when('/items', {templateUrl: '/admin/partials/items.html', controller: 'ItemsCtrl'});
   $routeProvider.when('/item/:itemId?', {templateUrl: '/admin/partials/itemEdit.html', controller: 'ItemEditCtrl'});
