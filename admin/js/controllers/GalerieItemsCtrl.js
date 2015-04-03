@@ -92,7 +92,7 @@ function($scope, $location, galerieService, itemService, $routeParams, msg, $mdD
     $scope.showAddItemDialog = function (section, ev) {
       $mdDialog.show({
         controller: DialogController,
-        templateUrl: '/static/admin/partials/addArticleDialog.html',
+        templateUrl: '/admin/partials/addArticleDialog.html',
         targetEvent: ev,
       })
       .then(function(item) {

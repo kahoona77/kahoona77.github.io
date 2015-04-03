@@ -30,7 +30,7 @@ controller('GaleriesCtrl', ['$scope', '$location', 'galerieService', 'msg', '$md
 
   $scope.showBottomSheet = function(galerie, $event) {
     $mdBottomSheet.show({
-      templateUrl: '/static/admin/partials/galeriesBottomSheet.html',
+      templateUrl: '/admin/partials/galeriesBottomSheet.html',
       controller: 'BottomSheetCtrl',
       targetEvent: $event
     }).then(function(clickedItem) {

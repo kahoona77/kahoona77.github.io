@@ -27,7 +27,7 @@ controller('ItemsCtrl', ['$scope', '$location', 'itemService', 'msg', '$mdDialog
 
   $scope.showBottomSheet = function(item, $event) {
     $mdBottomSheet.show({
-      templateUrl: '/static/admin/partials/itemsBottomSheet.html',
+      templateUrl: '/admin/partials/itemsBottomSheet.html',
       controller: 'BottomSheetCtrl',
       targetEvent: $event
     }).then(function(clickedItem) {
